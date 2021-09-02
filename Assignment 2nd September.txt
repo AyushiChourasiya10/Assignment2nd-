@@ -1,0 +1,108 @@
+1- Program of array for average and percentage of scores
+
+package com.yash;
+import java.util.*;
+ 
+public class Average{
+   
+    public static void main(String args[])
+    {
+     Scanner s = new Scanner(System.in);
+     System.out.println("Enter number of scores");
+     int n = s.nextInt();
+     int[] A = new int[n];
+     for(int i = 0; i<n; i++)
+     {
+      A[i] = s.nextInt();
+     }
+     double sum = 0;
+     for(int i:A)
+     {
+       sum = sum + i;
+     }
+     double avg = 0;
+     avg = sum/n;
+     System.out.println("average score of array is:" +avg);
+     double per;
+     per = avg*100;
+     System.out.println("percentage score of array is:" +per);
+    }
+}
+2- Program of matrix multplication
+package com.yash;
+     public class Matrix3D{  
+     public static void main(String args[])
+      {      
+       int a[][]={{1,3,2},{1,2,3},{4,4,1}};    
+       int b[][]={{2,1,6},{7,1,4},{6,3,8}};    
+       int c[][]=new int[3][3];  
+      for(int i=0;i<3;i++)
+      {    
+        for(int j=0;j<3;j++)
+        {    
+         c[i][j]=0;      
+         for(int k=0;k<3;k++)      
+         {      
+         c[i][j]+=a[i][k]*b[k][j];      
+          }  
+     System.out.print(c[i][j]+" ");  
+        } 
+     System.out.println();//new line    
+      }    
+   }  
+} 
+3- Program of an array sort of 10 element in descending order
+package com.yash;
+   public class Element{
+   public static void main(String args[])
+   {
+   int [] arr = new int [] {8,2,3,1,6,5,7,10,12,16};     
+        int temp = 0;      
+        System.out.println("Elements of original array: ");    
+        for (int i = 0; i <= 10; i++) {     
+            System.out.print(arr[i] + " ");    
+        }       
+        for (int i = 0; i <= 10; i++) {     
+            for (int j = i+1; j <= 10; j++) {     
+               if(arr[i] < arr[j]) {    
+                   temp = arr[i];    
+                   arr[i] = arr[j];    
+                   arr[j] = temp;    
+               }     
+            }     
+        }    
+            
+        System.out.println();      
+        System.out.println("Elements of array sorted in descending order: ");    
+        for (int i = 0; i <= 10; i++) {     
+            System.out.print(arr[i] + " ");    
+        }    
+    }    
+}
+4- Create a variable of type String with following data,
+   String data="Java is Object oriented. Java is platform independent.Java is simple."
+   Search for word "Java" and count number of occurrences.
+   package com.yash;
+   import java.io.*;
+   public static void main(String args[]) 
+   {
+     String data = "Java is Object oriented. Java is platform independent.Java is simple.";
+     String word = "Java";
+     System.out.println(countOccurrences(data, word));
+   }
+ 
+    Public class String{
+    static int countOccurrences(String data, String word) 
+    {
+     String a[] = data.split(" ");
+     int count = 0;
+     for (int i = 0; i < a.length; i++) 
+     {
+    if (word.equals(a[i]))
+    count++;
+    } 
+    return count;
+    }
+}    
+   
+   
